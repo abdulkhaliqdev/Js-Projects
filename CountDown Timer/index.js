@@ -8,11 +8,28 @@ function countDown(){
     const currentDate = new Date();
 
     const seconds = (newYearsdate-currentDate)/1000;
+    const d=seconds/86400;
+    const h=(seconds/3600)%24;
+    const m=(seconds/60)%60;
+    const s=(seconds%60);
+    console.log(Math.floor(d));
+    console.log(Math.floor(h));
+    console.log(Math.floor(m));
+    console.log(Math.floor(s));
 
-    
-
-    console.log(newYearsdate);
-    console.log(currentDate);
-    console.log(seconds);
+    dayss.innerHTML=Math.floor(d);
+    hourss.innerHTML=setdigit(Math.floor(h));
+    minutess.innerHTML=setdigit(Math.floor(m));
+    secondss.innerHTML=setdigit(Math.floor(s));
+}
+function setdigit(time)
+{
+    if(time<10){
+        return '0'+time;
+    }
+    else{
+        return time;
+    }
 }
 countDown();
+setInterval(countDown,1000);
