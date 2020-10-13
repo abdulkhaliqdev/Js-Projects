@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+ box-sizing: border-box;  
+ text-align: center;
+}
+body{
+    background-image: url("/background.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+body>h1{
+    font-size: 400%;
+}
+.font-color{
+    color: aliceblue;
+}
+.container{
+    margin: 30px;
+}
+.container>h1{
+    font-size: 350%;
+}
+.container>p{
+    font-size: 150%;
+}
+#digi-clock{
+    display: flex;
+    justify-content: center;    
+}
